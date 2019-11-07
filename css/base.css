@@ -24,6 +24,16 @@ ul {
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
+input, button {
+	padding: 0;
+	border: 0;
+	outline: none; /*取消蓝色边框*/
+}
+
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?axvffw');
@@ -35,6 +45,9 @@ ul {
   font-style: normal;
 }
 
+body {
+	background-color: #f6f6f6;
+}
 
 /*顶部开始*/
 .J_event {
@@ -93,6 +106,13 @@ ul {
 	color: #F10215;
 }
 
+.shortcut .fl li {
+	margin-left: 200px;
+	/*此处指定行高，清除浮动为的是不会影响header的布局*/
+	height: 30px;
+	overflow: hidden;
+}
+
 .shortcut .fr li {
 	float: left; /*父标签是靠右浮动，子标签想要按照顺序就要左浮动？为什么*/
 }
@@ -117,3 +137,177 @@ ul {
 	right: -2px;
 	top: -2px;
 }
+
+.erweima {
+	width: 60px;
+	height: 60px;
+	border: 1px solid #ccc;
+	padding: 3px;
+	position: absolute;
+	left: -20px;
+    top: 35px;
+}
+
+/*herder开始*/
+.header {
+	height: 140px;
+}
+
+.inner{
+	height: 140px;
+	position: relative;
+}
+
+.logo {
+	width: 190px;
+	height: 170px;
+	background-color: purple;
+	position: absolute;/*一般都是需要将定位放在块级元素中（非display转换成的元素）*/
+	left: 0;
+	top: -30px;
+	box-shadow: 0 -12px 10px rgba(0,0,0,.2); /*盒子阴影*/
+}
+
+.logo h1 {
+	margin: 0;
+}
+
+.logo a {
+	display: block;
+	width: 190px;
+	height: 170px;
+	background:  url(../images/logo.jpg) no-repeat;
+	text-indent: -99999px; /*首行缩进，为的是京东二字隐藏*/
+	overflow: hidden; /*为保证上边的京东二字切除，需要使用此样式切除（为什么可以切除？）*/
+}
+
+/*搜索部分*/
+.search {
+	width: 550px;
+	height: 35px;
+	position: absolute;
+	left: 320px;
+	top: 25px;
+}
+
+.search input {
+	width: 493px;
+	height: 33px;
+	border: 1px solid #F10215;
+	padding-left: 5px;
+	color: #989898;
+	float: left;
+}
+
+.search button {
+	width: 50px;
+	height: 35px;
+	background-color: #F10215;
+	float: left;
+	cursor: pointer;
+}
+
+.search i {
+	font-family: 'icomoon';
+	font-size: 16px;
+	font-style: normal;
+	color: #fff;
+}
+
+.search em {
+	background: url(../images/sprite-search.png) 0 0 no-repeat;
+	position: absolute;
+	top: 10px;
+	right: 65px;
+	width: 19px;
+	height: 15px;
+}
+
+.search em:hover {
+	background-position: -30px 0; /*背景定位*/
+}
+
+/*热词部分*/
+.hotwords {
+	position: absolute;
+	left: 320px;
+	top: 70px;
+}
+
+.hotwords a {
+	font-size: 12px;
+	color: #9E9B99;
+}
+
+/*购物车部分*/
+.mycar {
+	position: absolute;
+	border: 1px solid #ccc;
+	top: 25px;
+	right: 100px;
+	height: 33px;
+	width: 188px;
+	line-height: 33px;
+	text-align: center;
+}
+
+.mycar i {
+	font-family: 'icomoon';
+	font-size: 16px;
+	font-style: normal;
+	color: #f10215;
+	padding-right: 5px;
+}
+
+.mycar a { /*a属于行内元素，对于需要定位的属性需要在块级元素指定，因为可以指定宽高*/
+	font-size: 12px;
+	color: #f10215;
+}
+
+.mycar s {
+	position: absolute;
+	top: 5px;
+	left: 140px;
+	text-decoration: none;
+	font-size: 12px;
+	height: 16px;
+	line-height: 16px;
+	background-color:  #f10215;
+	border-radius: 7px;
+	padding: 0 3px;
+}
+
+/*电脑部分*/
+.computer {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+
+/*下部导航栏开始*/
+.navitems {
+	position: absolute;
+	left: 200px;
+	bottom: 0;
+}
+
+.navitems ul {
+	float: left;
+}
+
+.navitems ul li {
+	float: left;
+	height: 40px;
+	margin-left: 30px;
+
+}
+
+.navitems li a {
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 40px;
+	color: #555A5F;
+}
+/*下部导航栏结束*/
+/*herder结束*/
